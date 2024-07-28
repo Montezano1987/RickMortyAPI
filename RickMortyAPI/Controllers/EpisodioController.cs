@@ -19,9 +19,9 @@ namespace RickMortyAPI.Controllers
             response.EnsureSuccessStatusCode();
 
             var jsonString = await response.Content.ReadAsStringAsync();
-            var episodioResponse = JsonSerializer.Deserialize<EpisodioViewModel>(jsonString, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+            var episodioResponse = JsonSerializer.Deserialize<EpisodioResponse>(jsonString, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
 
-            return View(episodioResponse);
+            return View(episodioResponse.Results);
         }
     }
 }

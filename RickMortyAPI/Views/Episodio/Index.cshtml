@@ -1,1 +1,42 @@
 ﻿@model List<RickMortyAPI.Models.EpisodioViewModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Episodio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rick and Morty Episodios</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>AirDate</th>
+                    <th>Episodios</th>
+                    <th>Characters</th>
+                    <th>Url</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var episodio in Model)
+                {
+                    <tr>
+                        <td>@episodio.Id</td>
+                        <td>@episodio.Name</td>
+                        <td>@episodio.AirDate</td>
+                        <td>@episodio.Episode</td>
+                        <td>@episodio.Characters</td>
+                        <td>@episodio.Url</td>
+                        <td>@episodio.Created</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
