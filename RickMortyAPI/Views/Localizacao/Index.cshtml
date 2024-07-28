@@ -1,0 +1,44 @@
+﻿@model List<RickMortyAPI.Models.PersonagemViewModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personagem</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rick and Morty Personagens</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Species</th>
+                    <th>Gender</th>
+                    <th>Origin</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var personagem in Model)
+                {
+                    <tr>
+                        <td><img src="@personagem.Image" alt="@personagem.Name" width="100" height="100" /></td>
+                        <td>@personagem.Id</td>
+                        <td>@personagem.Name</td>
+                        <td>@personagem.Status</td>
+                        <td>@personagem.Species</td>
+                        <td>@personagem.Gender</td>
+                        <td>@personagem.Origin.Name</td>
+                        <td>@personagem.Location.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
