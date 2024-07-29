@@ -1,6 +1,6 @@
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using RickMortyAPI.Models;
-using System.Diagnostics;
 
 namespace RickMortyAPI.Controllers
 {
