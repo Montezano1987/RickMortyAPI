@@ -1,26 +1,37 @@
-﻿using System.Net.Http;
-using System.Text.Json;
-using RickMortyAPI.Controllers;
-using Microsoft.AspNetCore.Mvc;
-using RickMortyAPI.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using RickMortyAPI.Service;
+using RickMortyAPI.ViewModel;
 
-public class PersonagemController : Controller
+namespace RickMortyAPI.Controllers
 {
-    private readonly HttpClient _httpClient;
+    public class PersonagemController : Controller
+	{
 
-    public PersonagemController(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
+		public async Task<IActionResult> Index()
+		{
+			var personagemService = new PersonagemService();
+			var personagens = await personagemService.BuscarPersonagens();
 
-    public async Task<IActionResult> Index()
-    {
-        var response = await _httpClient.GetAsync("https://rickandmortyapi.com/api/character");
-        response.EnsureSuccessStatusCode();
+			List<PersonagemViewModel> viewModel = new List<PersonagemViewModel>();
 
-        var jsonString = await response.Content.ReadAsStringAsync();
-        var personagemResponse = JsonSerializer.Deserialize<PersonagemResponse>(jsonString, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+			foreach (var p in personagens)
+			{
+				viewModel.Add(new PersonagemViewModel
+				{
+					Name = p.Name,
+					Species = p.Species,
+					Type = p.Type,
+					Gender = p.Gender,
+					Origin = p.Origin,
+					Location = p.Location,
+					Image = p.Image,
+					Created = p.Created
+				});
+			}
 
-        return View(personagemResponse.Results);
-    }
+			return View(viewModel);
+
+		}
+	}
 }
+

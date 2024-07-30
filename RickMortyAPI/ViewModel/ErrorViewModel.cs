@@ -1,4 +1,4 @@
-namespace RickMortyAPI.Models
+namespace RickMortyAPI.ViewModel
 {
     public class ErrorViewModel
     {

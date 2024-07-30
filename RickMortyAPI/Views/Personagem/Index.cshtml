@@ -1,4 +1,4 @@
-﻿@model List<RickMortyAPI.Models.PersonagemViewModel>
+﻿@model List<PersonagemViewModel>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +14,13 @@
             <thead>
                 <tr>
                     <th>Image</th>
-                    <th>Id</th>
                     <th>Name</th>
-                    <th>Status</th>
+                    <th>Type</th>
                     <th>Species</th>
                     <th>Gender</th>
                     <th>Origin</th>
                     <th>Location</th>
+                    <th>Created</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,13 +28,13 @@
                 {
                     <tr>
                         <td><img src="@personagem.Image" alt="@personagem.Name" width="100" height="100" /></td>
-                        <td>@personagem.Id</td>
                         <td>@personagem.Name</td>
-                        <td>@personagem.Status</td>
+                        <td>@personagem.Type</td>
                         <td>@personagem.Species</td>
                         <td>@personagem.Gender</td>
                         <td>@personagem.Origin.Name</td>
                         <td>@personagem.Location.Name</td>
+                        <td>@personagem.Created</td>
                     </tr>
                 }
             </tbody>

@@ -1,4 +1,4 @@
-﻿@model List<RickMortyAPI.Models.LocalizacaoViewModel>
+﻿@model List<LocalizacaoViewModel>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +13,9 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Name</th>
                     <th>Type</th>
                     <th>Dimension</th>
-                    <th>Residents</th>
-                    <th>Url</th>
                     <th>Created</th>
                 </tr>
             </thead>
@@ -26,12 +23,9 @@
                 @foreach (var localizacao in Model)
                 {
                     <tr>
-                        <td>@localizacao.Id</td>
                         <td>@localizacao.Name</td>
                         <td>@localizacao.Type</td>
                         <td>@localizacao.Dimension</td>
-                        <td>@localizacao.Residents</td>
-                        <td>@localizacao.Url</td>
                         <td>@localizacao.Created</td>
                     </tr>
                 }

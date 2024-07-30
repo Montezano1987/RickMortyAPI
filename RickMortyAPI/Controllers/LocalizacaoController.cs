@@ -1,27 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RickMortyAPI.ViewModel;
 using RickMortyAPI.Models;
-using System.Text.Json;
+using RickMortyAPI.Service;
 
 namespace RickMortyAPI.Controllers
 {
-    public class LocalizacaoController : Controller
-    {
-        private readonly HttpClient _httpClient;
+	public class LocalizacaoController : Controller
+	{
+		public async Task<IActionResult> Index()
+		{
+			var localizacaoService = new LocalizacaoService();
+			var localizacao = await localizacaoService.BuscarLocalizacoes();
 
-        public LocalizacaoController(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
+			List<LocalizacaoViewModel> viewModel = new List<LocalizacaoViewModel>();
+			foreach (var l in localizacao)
+			{
+				viewModel.Add(new LocalizacaoViewModel
+				{
+					Name = l.Name,
+					Type = l.Type,
+					Dimension = l.Dimension,
+					Created = l.Created,
 
-        public async Task<IActionResult> Index()
-        {
-            var response = await _httpClient.GetAsync("https://rickandmortyapi.com/api/location");
-            response.EnsureSuccessStatusCode();
+				});
+			}
 
-            var jsonString = await response.Content.ReadAsStringAsync();
-            var localizacaoResponse = JsonSerializer.Deserialize<LocalizacaoResponse>(jsonString, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+			return View(viewModel);
 
-            return View(localizacaoResponse.Results);
-        }
-    }
+		}
+	}
 }

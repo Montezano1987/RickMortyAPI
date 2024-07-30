@@ -1,27 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RickMortyAPI.Models;
-using System.Text.Json;
+using RickMortyAPI.Service;
+using RickMortyAPI.ViewModel;
 
 namespace RickMortyAPI.Controllers
 {
     public class EpisodioController : Controller
-    {
-        private readonly HttpClient _httpClient;
+	{
 
-        public EpisodioController(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
+		public async Task<IActionResult> Index()
+		{
+			var episodioService = new EpisodioService();
+			var episodios = await episodioService.BuscarEpisodios();
 
-        public async Task<IActionResult> Index()
-        {
-            var response = await _httpClient.GetAsync("https://rickandmortyapi.com/api/episode");
-            response.EnsureSuccessStatusCode();
+			List<EpisodioViewModel> viewModel = new List<EpisodioViewModel>();
 
-            var jsonString = await response.Content.ReadAsStringAsync();
-            var episodioResponse = JsonSerializer.Deserialize<EpisodioResponse>(jsonString, new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+			foreach (var e in episodios)
+			{
+				viewModel.Add(new EpisodioViewModel
+				{
+					Name = e.Name,
+					AirDate = e.AirDate,
+					Episode = e.Episode,
+					Created = e.Created
+				});
+			}
 
-            return View(episodioResponse.Results);
-        }
-    }
+			return View(viewModel);
+
+		}
+	}
 }
+
