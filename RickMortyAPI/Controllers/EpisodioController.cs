@@ -14,14 +14,14 @@ namespace RickMortyAPI.Controllers
 
 			List<EpisodioViewModel> viewModel = new List<EpisodioViewModel>();
 
-			foreach (var e in episodios)
+			foreach (var episodio in episodios)
 			{
 				viewModel.Add(new EpisodioViewModel
 				{
-					Name = e.Name,
-					AirDate = e.AirDate,
-					Episode = e.Episode,
-					Created = e.Created
+					Name = episodio.Name,
+					AirDate = episodio.AirDate,
+					Episode = episodio.Episode,
+					Created = episodio.Created
 				});
 			}
 

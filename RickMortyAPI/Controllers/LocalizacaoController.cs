@@ -10,17 +10,17 @@ namespace RickMortyAPI.Controllers
 		public async Task<IActionResult> Index()
 		{
 			var localizacaoService = new LocalizacaoService();
-			var localizacao = await localizacaoService.BuscarLocalizacoes();
+			var localizacoes = await localizacaoService.BuscarLocalizacoes();
 
 			List<LocalizacaoViewModel> viewModel = new List<LocalizacaoViewModel>();
-			foreach (var l in localizacao)
+			foreach (var localizacao in localizacoes)
 			{
 				viewModel.Add(new LocalizacaoViewModel
 				{
-					Name = l.Name,
-					Type = l.Type,
-					Dimension = l.Dimension,
-					Created = l.Created,
+					Name = localizacao.Name,
+					Type = localizacao.Type,
+					Dimension = localizacao.Dimension,
+					Created = localizacao.Created,
 
 				});
 			}

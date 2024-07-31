@@ -14,18 +14,18 @@ namespace RickMortyAPI.Controllers
 
 			List<PersonagemViewModel> viewModel = new List<PersonagemViewModel>();
 
-			foreach (var p in personagens)
+			foreach (var personagem in personagens)
 			{
 				viewModel.Add(new PersonagemViewModel
 				{
-					Name = p.Name,
-					Species = p.Species,
-					Type = p.Type,
-					Gender = p.Gender,
-					Origin = p.Origin,
-					Location = p.Location,
-					Image = p.Image,
-					Created = p.Created
+					Name = personagem.Name,
+					Species = personagem.Species,
+					Type = personagem.Type,
+					Gender = personagem.Gender,
+					Origin = personagem.Origin,
+					Location = personagem.Location,
+					Image = personagem.Image,
+					Created = personagem.Created
 				});
 			}
 
