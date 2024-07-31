@@ -19,7 +19,7 @@ namespace RickMortyAPI.Models
 		public object Prev { get; set; }
 	}
 
-	public class ResultEpisodio
+	public class Episodio
 	{
 		[JsonPropertyName("id")]
 		public int Id { get; set; }
@@ -43,12 +43,12 @@ namespace RickMortyAPI.Models
 		public DateTime Created { get; set; }
 	}
 
-	public class Episodio
+	public class RetornoApiEpisodioDTO
 	{
 		[JsonPropertyName("info")]
 		public Info Info { get; set; }
 
 		[JsonPropertyName("results")]
-		public List<ResultEpisodio> Results { get; set; }
+		public List<Episodio> Episodios { get; set; }
 	}
 }

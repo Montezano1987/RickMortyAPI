@@ -34,7 +34,7 @@ public class Origin
 	public string Url { get; set; }
 }
 
-public class ResultPersonagem
+public class Personagem
 {
 	[JsonPropertyName("id")]
 	public int Id { get; set; }
@@ -73,12 +73,12 @@ public class ResultPersonagem
 	public DateTime Created { get; set; }
 }
 
-public class Personagem
+public class RetornoApiPersonagemDTO
 {
 	[JsonPropertyName("info")]
 	public Info2 Info2 { get; set; }
 
 	[JsonPropertyName("results")]
-	public List<ResultPersonagem> Results { get; set; }
+	public List<Personagem> Results { get; set; }
 }
 

@@ -15,7 +15,7 @@ public class Info
 	public object Prev { get; set; }
 }
 
-public class ResultLocalizacao
+public class Localizacao
 {
 	[JsonPropertyName("id")]
 	public int Id { get; set; }
@@ -39,12 +39,12 @@ public class ResultLocalizacao
 	public DateTime Created { get; set; }
 }
 
-public class Localizacao
+public class RetornoApiLocalizacaoDTO
 {
 	[JsonPropertyName("info")]
 	public Info Info { get; set; }
 
 	[JsonPropertyName("results")]
-	public List<ResultLocalizacao> Results { get; set; }
+	public List<Localizacao> Results { get; set; }
 }
 
