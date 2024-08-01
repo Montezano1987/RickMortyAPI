@@ -73,7 +73,7 @@ public class Personagem
 	public DateTime Criado { get; set; }
 }
 
-public class RetornoApiPersonagemDTO
+public class RetornoApiPersonagem
 {
 	[JsonPropertyName("info")]
 	public Info2 Info2 { get; set; }

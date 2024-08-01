@@ -43,7 +43,7 @@ namespace RickMortyAPI.Models
 		public DateTime Criacao { get; set; }
 	}
 
-	public class RetornoApiEpisodioDTO
+	public class RetornoApiEpisodio
 	{
 		[JsonPropertyName("info")]
 		public Info Info { get; set; }

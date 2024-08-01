@@ -8,10 +8,9 @@ namespace RickMortyAPI.Service
 		{
 			var httpClient = new HttpClient();
 			var response = await httpClient.GetAsync("https://rickandmortyapi.com/api/character");
-			response.EnsureSuccessStatusCode();
 
 			var jsonString = await response.Content.ReadAsStringAsync();
-			var personagemResponse = JsonSerializer.Deserialize<RetornoApiPersonagemDTO>(jsonString);
+			var personagemResponse = JsonSerializer.Deserialize<RetornoApiPersonagem>(jsonString);
 
 			return personagemResponse.Results;
 

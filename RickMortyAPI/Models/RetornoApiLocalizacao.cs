@@ -39,7 +39,7 @@ public class Localizacao
 	public DateTime Criado { get; set; }
 }
 
-public class RetornoApiLocalizacaoDTO
+public class RetornoApiLocalizacao
 {
 	[JsonPropertyName("info")]
 	public Info Info { get; set; }
