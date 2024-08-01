@@ -25,7 +25,7 @@ namespace RickMortyAPI.Controllers
 					Origem = personagem.Origem,
 					Localizacao = personagem.Localizacao,
 					Imagem = personagem.Imagem,
-					Criado = personagem.Criado
+					Criado = personagem.Criacao,
 				});
 			}
 

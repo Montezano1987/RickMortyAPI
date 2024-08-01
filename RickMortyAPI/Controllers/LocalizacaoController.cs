@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RickMortyAPI.ViewModel;
-using RickMortyAPI.Models;
 using RickMortyAPI.Service;
 
 namespace RickMortyAPI.Controllers
@@ -20,7 +19,7 @@ namespace RickMortyAPI.Controllers
 					Nome = localizacao.Nome,
 					Tipo = localizacao.Tipo,
 					Dimensao = localizacao.Dimensao,
-					Criado = localizacao.Criado,
+					Criado = localizacao.Criacao,
 
 				});
 			}

@@ -21,8 +21,8 @@ namespace RickMortyAPI.Controllers
 					Nome = episodio.Nome,
 					Transmissao = episodio.Transmissao,
 					Episodio = episodio.Episodios,
-					Criacao = episodio.Criacao
-				});
+					Criacao = episodio.Criacao,
+                });
 			}
 
 			return View(viewModel);
