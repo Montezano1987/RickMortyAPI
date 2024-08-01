@@ -1,7 +1,7 @@
 ﻿@model List<PersonagemViewModel>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Personagem</title>
@@ -13,28 +13,28 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Species</th>
-                    <th>Gender</th>
-                    <th>Origin</th>
-                    <th>Location</th>
-                    <th>Created</th>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Espécie</th>
+                    <th>Gênero</th>
+                    <th>Origem</th>
+                    <th>Localização</th>
+                    <th>Criado</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var personagem in Model)
                 {
                     <tr>
-                        <td><img src="@personagem.Image" alt="@personagem.Name" width="100" height="100" /></td>
-                        <td>@personagem.Name</td>
-                        <td>@personagem.Type</td>
-                        <td>@personagem.Species</td>
-                        <td>@personagem.Gender</td>
-                        <td>@personagem.Origin.Name</td>
-                        <td>@personagem.Location.Name</td>
-                        <td>@personagem.Created</td>
+                        <td><img src="@personagem.Imagem" alt="@personagem.Nome" width="100" height="100" /></td>
+                        <td>@personagem.Nome</td>
+                        <td>@personagem.Tipo</td>
+                        <td>@personagem.Especie</td>
+                        <td>@personagem.Genero</td>
+                        <td>@personagem.Origem.Nome</td>
+                        <td>@personagem.Localizacao.Nome</td>
+                        <td>@personagem.Criado</td>
                     </tr>
                 }
             </tbody>

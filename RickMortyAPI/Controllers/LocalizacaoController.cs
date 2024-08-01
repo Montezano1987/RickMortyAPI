@@ -17,10 +17,10 @@ namespace RickMortyAPI.Controllers
 			{
 				viewModel.Add(new LocalizacaoViewModel
 				{
-					Name = localizacao.Name,
-					Type = localizacao.Type,
-					Dimension = localizacao.Dimension,
-					Created = localizacao.Created,
+					Nome = localizacao.Nome,
+					Tipo = localizacao.Tipo,
+					Dimensao = localizacao.Dimensao,
+					Criado = localizacao.Criado,
 
 				});
 			}

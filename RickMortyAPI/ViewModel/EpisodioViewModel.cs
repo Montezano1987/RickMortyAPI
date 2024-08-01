@@ -4,11 +4,11 @@ namespace RickMortyAPI.ViewModel
 {
 	public class EpisodioViewModel
 	{
-		public string Name { get; set; }
+		public string Nome { get; set; }
 
 		[JsonPropertyName("air_date")]
-		public string AirDate { get; set; }
-		public string Episode { get; set; }
-		public DateTime Created { get; set; }
+		public string Transmissao { get; set; }
+		public string Episodio { get; set; }
+		public DateTime Criacao { get; set; }
 	}
 }

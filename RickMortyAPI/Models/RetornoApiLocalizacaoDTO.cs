@@ -3,16 +3,16 @@
 public class Info
 {
 	[JsonPropertyName("count")]
-	public int Count { get; set; }
+	public int Contar { get; set; }
 
 	[JsonPropertyName("pages")]
-	public int Pages { get; set; }
+	public int Paginas { get; set; }
 
 	[JsonPropertyName("next")]
-	public string Next { get; set; }
+	public string Proxima { get; set; }
 
 	[JsonPropertyName("prev")]
-	public object Prev { get; set; }
+	public object Anterior { get; set; }
 }
 
 public class Localizacao
@@ -21,22 +21,22 @@ public class Localizacao
 	public int Id { get; set; }
 
 	[JsonPropertyName("name")]
-	public string Name { get; set; }
+	public string Nome { get; set; }
 
 	[JsonPropertyName("type")]
-	public string Type { get; set; }
+	public string Tipo { get; set; }
 
 	[JsonPropertyName("dimension")]
-	public string Dimension { get; set; }
+	public string Dimensao { get; set; }
 
 	[JsonPropertyName("residents")]
-	public List<string> Residents { get; set; }
+	public List<string> Residentes { get; set; }
 
 	[JsonPropertyName("url")]
 	public string Url { get; set; }
 
 	[JsonPropertyName("created")]
-	public DateTime Created { get; set; }
+	public DateTime Criado { get; set; }
 }
 
 public class RetornoApiLocalizacaoDTO

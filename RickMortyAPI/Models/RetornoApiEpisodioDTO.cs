@@ -7,16 +7,16 @@ namespace RickMortyAPI.Models
 	public class Info
 	{
 		[JsonPropertyName("count")]
-		public int Count { get; set; }
+		public int Contar { get; set; }
 
 		[JsonPropertyName("pages")]
-		public int Pages { get; set; }
+		public int Paginas { get; set; }
 
 		[JsonPropertyName("next")]
-		public string Next { get; set; }
+		public string Proximo { get; set; }
 
 		[JsonPropertyName("prev")]
-		public object Prev { get; set; }
+		public object Anterior { get; set; }
 	}
 
 	public class Episodio
@@ -25,22 +25,22 @@ namespace RickMortyAPI.Models
 		public int Id { get; set; }
 
 		[JsonPropertyName("name")]
-		public string Name { get; set; }
+		public string Nome { get; set; }
 
 		[JsonPropertyName("air_date")]
-		public string AirDate { get; set; }
+		public string Transmissao { get; set; }
 
 		[JsonPropertyName("episode")]
-		public string Episode { get; set; }
+		public string Episodios { get; set; }
 
 		[JsonPropertyName("characters")]
-		public List<string> Characters { get; set; }
+		public List<string> Personagens { get; set; }
 
 		[JsonPropertyName("url")]
 		public string Url { get; set; }
 
 		[JsonPropertyName("created")]
-		public DateTime Created { get; set; }
+		public DateTime Criacao { get; set; }
 	}
 
 	public class RetornoApiEpisodioDTO

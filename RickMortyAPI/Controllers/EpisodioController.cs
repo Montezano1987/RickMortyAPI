@@ -18,10 +18,10 @@ namespace RickMortyAPI.Controllers
 			{
 				viewModel.Add(new EpisodioViewModel
 				{
-					Name = episodio.Name,
-					AirDate = episodio.AirDate,
-					Episode = episodio.Episode,
-					Created = episodio.Created
+					Nome = episodio.Nome,
+					Transmissao = episodio.Transmissao,
+					Episodio = episodio.Episodios,
+					Criacao = episodio.Criacao
 				});
 			}
 

@@ -5,27 +5,27 @@ namespace RickMortyAPI.ViewModel
 	public class PersonagemViewModel
 	{
 		[JsonPropertyName("name")]
-		public string Name { get; set; }
+		public string Nome { get; set; }
 
 		[JsonPropertyName("species")]
-		public string Species { get; set; }
+		public string Especie { get; set; }
 
 		[JsonPropertyName("type")]
-		public string Type { get; set; }
+		public string Tipo { get; set; }
 
 		[JsonPropertyName("gender")]
-		public string Gender { get; set; }
+		public string Genero { get; set; }
 
 		[JsonPropertyName("origin")]
-		public Origin Origin { get; set; }
+		public Origin Origem { get; set; }
 
 		[JsonPropertyName("location")]
-		public Location Location { get; set; }
+		public Location Localizacao { get; set; }
 
 		[JsonPropertyName("image")]
-		public string Image { get; set; }
+		public string Imagem { get; set; }
 
 		[JsonPropertyName("created")]
-		public DateTime Created { get; set; }
+		public DateTime Criado { get; set; }
 	}
 }

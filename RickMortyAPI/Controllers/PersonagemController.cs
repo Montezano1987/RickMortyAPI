@@ -18,14 +18,14 @@ namespace RickMortyAPI.Controllers
 			{
 				viewModel.Add(new PersonagemViewModel
 				{
-					Name = personagem.Name,
-					Species = personagem.Species,
-					Type = personagem.Type,
-					Gender = personagem.Gender,
-					Origin = personagem.Origin,
-					Location = personagem.Location,
-					Image = personagem.Image,
-					Created = personagem.Created
+					Nome = personagem.Nome,
+					Especie = personagem.Especies,
+					Tipo = personagem.Tipo,
+					Genero = personagem.Genero,
+					Origem = personagem.Origem,
+					Localizacao = personagem.Localizacao,
+					Imagem = personagem.Imagem,
+					Criado = personagem.Criado
 				});
 			}
 

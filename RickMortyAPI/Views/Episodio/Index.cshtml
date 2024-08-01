@@ -1,7 +1,7 @@
 ﻿@model List<EpisodioViewModel>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Episodio</title>
@@ -13,20 +13,20 @@
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Air Date</th>
-					<th>Episode</th>
-					<th>Created</th>
+					<th>Nome</th>
+					<th>Transmissão</th>
+					<th>Episódio</th>
+					<th>Criação</th>
 				</tr>
 			</thead>
 			<tbody>
 				@foreach (var episodio in Model)
 				{
 					<tr>
-						<td>@episodio.Name</td>
-						<td>@episodio.AirDate</td>
-						<td>@episodio.Episode</td>
-						<td>@episodio.Created</td>
+						<td>@episodio.Nome</td>
+						<td>@episodio.Transmissao</td>
+						<td>@episodio.Episodio</td>
+						<td>@episodio.Criacao</td>
 					</tr>
 				}
 			</tbody>

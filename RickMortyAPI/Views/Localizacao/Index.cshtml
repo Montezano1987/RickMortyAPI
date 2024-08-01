@@ -1,7 +1,7 @@
 ﻿@model List<LocalizacaoViewModel>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Localizacao</title>
@@ -13,20 +13,20 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Dimension</th>
-                    <th>Created</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Dimensão</th>
+                    <th>Criado</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var localizacao in Model)
                 {
                     <tr>
-                        <td>@localizacao.Name</td>
-                        <td>@localizacao.Type</td>
-                        <td>@localizacao.Dimension</td>
-                        <td>@localizacao.Created</td>
+                        <td>@localizacao.Nome</td>
+                        <td>@localizacao.Tipo</td>
+                        <td>@localizacao.Dimensao</td>
+                        <td>@localizacao.Criado</td>
                     </tr>
                 }
             </tbody>

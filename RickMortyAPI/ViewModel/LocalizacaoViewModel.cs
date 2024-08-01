@@ -6,16 +6,16 @@ namespace RickMortyAPI.ViewModel
 	{
 
 		[JsonPropertyName("name")]
-		public string Name { get; set; }
+		public string Nome { get; set; }
 
 		[JsonPropertyName("type")]
-		public string Type { get; set; }
+		public string Tipo { get; set; }
 
 		[JsonPropertyName("dimension")]
-		public string Dimension { get; set; }
+		public string Dimensao { get; set; }
 
 		[JsonPropertyName("created")]
-		public DateTime Created { get; set; }
+		public DateTime Criado { get; set; }
 	}
 }
 
